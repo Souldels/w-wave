@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+	<title>Радио W-Wave</title>
+	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./libs/choices.min.css">
+	<link rel="stylesheet" href="./libs/accordion.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./css/hamburgers.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+		</div>
+
+		<div class="header__top container">
+			<div class="header__logo" data-da=".header,1200,first">
+				<div class="header__logo-container container">
+					<a href="#" class="header__logo-link">
+						<img class="header__logo-img" src="./img/logo.svg" alt="логотип радио w-wave">
+					</a>
+				</div>
+			</div>
+
+			<button class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+
+			<nav class="header__top-nav" id="navigation">
+				<ul class="header__top-list">
+					<li class="header__top-item">
+						<a href="#podcasts" class="header__top-link" aria-label="Подкасты">Подкасты</a>
+					</li>
+					<li class="header__top-item">
+						<a href="#shows" class="header__top-link" aria-label="Передачи">Передачи</a>
+					</li>
+					<li class="header__top-item">
+						<a href="#guests" class="header__top-link" aria-label="Гости">Гости</a>
+					</li>
+					<li class="header__top-item">
+						<a href="#playlists" class="header__top-link" aria-label="Плейлисты">Плейлисты</a>
+					</li>
+					<li class="header__top-item">
+						<a href="#about-us" class="header__top-link" aria-label="О нас">О нас</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="header__top-right">
+				<form action="#" class="header__search-form">
+					<input class="header__search-input" id="search" name="search" placeholder="Поиск по сайту" tabindex="-1" autocomplete="off">
+					<button class="header__search-btn btn-reset" type="button" aria-label="Поиск">
+						<svg width="24" height="24" class="header__search">
+							<use class="header__search-icon" xlink:href="./sprite.svg#search"></use>
+						</svg>
+					</button>
+				</form>
+				<a href="#modal" class="header__top-btn" data-da=".header__logo-container,576,last" aria-label="Вход">Вход</a>
+			</div>
+		</div>
+
+		<div class="header__bottom">
+			<div class="header__bottom-container container">
+				<div class="header__bottom-on-air on-air">
+
+					<button class="on-air__btn btn-reset" aria-label="Что в эфире?">
+						<span class="on-air__btn-plus"></span>
+						Что в эфире?</button>
+				</div>
+				<nav class="header__bottom-nav" data-da=".header__top-nav,767.8,last">
+					<ul class="header__bottom-list">
+						<li class="header__bottom-item">
+							<a href="#" class="header__bottom-link" aria-label="Новости">Новости</a>
+						</li>
+						<li class="header__bottom-item">
+							<a href="#" class="header__bottom-link" aria-label="Блоги">Блоги</a>
+						</li>
+						<li class="header__bottom-item">
+							<a href="#" class="header__bottom-link" aria-label="Топы">Топы</a>
+						</li>
+						<li class="header__bottom-item">
+							<a href="#" class="header__bottom-link" aria-label="Опросы">Опросы</a>
+						</li>
+						<li class="header__bottom-item">
+							<a href="#" class="header__bottom-link" aria-label="Рейтинги">Рейтинги</a>
+						</li>
+						<li class="header__bottom-item">
+							<a href="#" class="header__bottom-link" aria-label="Реклама">Реклама</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__bottom-right">
+					<div class="header__bottom-play">
+
+						<button class="header__btn btn-reset" aria-label="ранее в эфире музыка">
+							<svg class="header__btn-play" class="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+							</svg>
+							<svg class="header__btn-pause" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0Z" />
+								<rect x="7" y="6" width="2" height="8" rx="1" fill="white" />
+								<rect x="11" y="6" width="2" height="8" rx="1" fill="white" />
+							</svg>
+						</button>
+
+						<div class="header__bottom-text">
+							<span class="header__bottom-text-top">Ранее в эфире</span>
+							<span class="header__bottom-text-bottom">«Музыка»</span>
+						</div>
+					</div>
+
+					<div class="header__bottom-play">
+						<button class="header__btn btn-reset" aria-label="сейчас в эфире как так">
+							<svg class="header__btn-play" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+							</svg>
+							<svg class="header__btn-pause" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0Z" />
+								<rect x="7" y="6" width="2" height="8" rx="1" fill="white" />
+								<rect x="11" y="6" width="2" height="8" rx="1" fill="white" />
+							</svg>
+						</button>
+						<div class="header__bottom-text">
+							<span class="header__bottom-text-top">Сейчас в эфире</span>
+							<span class="header__bottom-text-bottom">«Как так?»</span>
+						</div>
+					</div>
+
+					<button class="header__btn btn-992 btn-reset" aria-label="Слушать эфир">
+						<svg width="24" height="24" class="header__btn_default">
+							<use class="header__btn-play" xlink:href="./sprite.svg#header__play-btn"></use>
+						</svg>
+						<svg width="24" height="24" class="header__btn_pause">
+							<use class="header__btn-pause" xlink:href="./sprite.svg#header__pause"></use>
+						</svg>
+					</button>
+
+				</div>
+				<div class="header__bottom-rating">
+					<img src="./img/headerRating.svg" alt="возрастной рейтинг 12+">
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<main class="main">
+		<section class="hero container">
+			<h1 class="hero__title">Радио<i> W-Wawe</i></h1>
+			<p class="hero__desc">
+				Привет, на&nbsp;связи W-Wawe! Раньше мы&nbsp;были изданием, а&nbsp;теперь пробуем себя в&nbsp;разоворном жанре. Говорим о&nbsp;музыке, политике, истории, науке и&nbsp;культуре. Здесь, помимо прямого эфира&nbsp;&mdash; архив передач и&nbsp;многое другое:)
+			</p>
+			<a href="#" class="hero__btn" aria-label="Слушать эфир<" onclick="event.preventDefault();">Слушать эфир</a>
+		</section>
+
+		<section class="podcasts" id="podcasts">
+			<div class="container podcasts__container">
+				<h2 class="podcasts__title">Подкасты</h2>
+				<ul class="podcasts__list">
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 560px)" srcset="./img/podcast1.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/podcast1-320.jpg">
+									<img src="./img/podcast1.jpg" alt="Европа. XIX век">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">14 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration" role="timer" aria-live="off">15:43</span>
+										<h3 class="podcast__title">Европа. XIX век</h3>
+										<p class="podcast__author" aria-description="автор">Дмитрий Гутенберг</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">258</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">104</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">68</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 560px)" srcset="./img/podcast2.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/podcast2-320.jpg">
+									<img src="./img/podcast2.jpg" alt="О музыке">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">11 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">5:32</span>
+										<h3 class="podcast__title">О музыке</h3>
+										<p class="podcast__author" aria-description="автор">Дмитрий Гутенберг</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">207</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">34</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">18</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 560px)" srcset="./img/podcast3.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/podcast3-320.jpg">
+									<img src="./img/podcast3.jpg" alt="Люди сегодня">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">8 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">8:54</span>
+										<h3 class="podcast__title">Люди сегодня</h3>
+										<p class="podcast__author" aria-description="автор">Анна Васильева</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">104</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">54</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">32</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 560px)" srcset="./img/podcast4.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/podcast4-320.jpg">
+									<img src="./img/podcast4.jpg" alt="Хэллоу, Африка!">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">5 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">9:04</span>
+										<h3 class="podcast__title">Хэллоу, Африка!</h3>
+										<p class="podcast__author" aria-description="автор">Пётр Дмитриевский</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">87</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">44</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">5</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 320px)" srcset="./img/podcast5.jpg">
+									<img src="./img/podcast5.jpg" alt="Обо всем">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">2 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">7:03</span>
+										<h3 class="podcast__title">Обо всём</h3>
+										<p class="podcast__author" aria-description="автор">Пётр Дмитриевский</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">64</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">30</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">8</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 320px)" srcset="./img/podcast6.jpg">
+									<img src="./img/podcast6.jpg" alt="Физика цвета">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">28 мая</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">9:15</span>
+										<h3 class="podcast__title">Физика цвета</h3>
+										<p class="podcast__author" aria-description="автор">Татьяна Флеганова</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">58</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">29</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">14</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 320px)" srcset="./img/podcast7.jpg">
+									<img src="./img/podcast7.jpg" alt="Источник звука">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">22 мая</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">16:04</span>
+										<h3 class="podcast__title">Источник звука</h3>
+										<p class="podcast__author" aria-description="автор">Пётр Дмитриевский</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">55</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">20</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">12</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 320px)" srcset="./img/podcast8.jpg">
+									<img src="./img/podcast8.jpg" alt="Правила этикета">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">18 мая</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">6:55</span>
+										<h3 class="podcast__title">Правила этикета</h3>
+										<p class="podcast__author" aria-description="автор">Татьяна Флеганова</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">24</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">54</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">42</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 320px)" srcset="./img/podcast6.jpg">
+									<img src="./img/podcast6.jpg" alt="Физика цвета">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">28 мая</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">9:15</span>
+										<h3 class="podcast__title">Физика цвета</h3>
+										<p class="podcast__author" aria-description="автор">Татьяна Флеганова</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">58</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">29</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">14</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 320px)" srcset="./img/podcast2.jpg">
+									<img src="./img/podcast2.jpg" alt="О музыке">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">11 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">5:32</span>
+										<h3 class="podcast__title">О музыке</h3>
+										<p class="podcast__author" aria-description="автор">Дмитрий Гутенберг</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">207</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">34</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">18</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 560px)" srcset="./img/podcast3.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/podcast3-320.jpg">
+									<img src="./img/podcast3.jpg" alt="Люди сегодня">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">8 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">8:54</span>
+										<h3 class="podcast__title">Люди сегодня</h3>
+										<p class="podcast__author" aria-description="автор">Анна Васильева</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">104</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">54</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">32</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="podcasts__item">
+						<article class="podcast">
+							<div class="podcast__img">
+								<picture>
+									<source media="(min-width: 560px)" srcset="./img/podcast4.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/podcast4-320.jpg">
+									<img src="./img/podcast4.jpg" alt="Хэллоу, Африка!">
+								</picture>
+								<div class="podcast__date">
+									<span class="podcast__date-text">5 июня</span>
+								</div>
+							</div>
+							<div class="podcast__body">
+								<div class="podcast__top">
+									<div class="podcast__desc">
+										<span class="podcast__duration">9:04</span>
+										<h3 class="podcast__title">Хэллоу, Африка!</h3>
+										<p class="podcast__author" aria-description="автор">Пётр Дмитриевский</p>
+									</div>
+									<button class="podcast__btn play btn-reset" aria-label="воспроизвести">
+										<svg class="podcast__btn_default" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<path d="M18.6924 28.7965L28.5716 21.7996C29.1428 21.3998 29.1428 20.6002 28.5716 20.2004L18.6924 13.2035C17.9943 12.7037 17 13.1835 17 14.0031V27.9969C17 28.8165 17.9943 29.2963 18.6924 28.7965Z" />
+										</svg>
+										<svg class="podcast__btn_pause" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="21" cy="21" r="20" stroke-width="2" />
+											<rect x="16" y="12" width="2" height="18" rx="1" />
+											<rect x="24" y="12" width="2" height="18" rx="1" />
+										</svg>
+									</button>
+								</div>
+								<div class="podcast__actions actions">
+									<button class="podcast__plays actions__content btn-reset" aria-label="количество воспроизведений">
+										<svg width="10" height="13" class="icon">
+											<use class="podcast__plays-icon" xlink:href="./sprite.svg#plays"></use>
+										</svg>
+										<span class="podcast__actions-text">87</span>
+									</button>
+									<button class="podcast__likes actions__content btn-reset" aria-label="нравится">
+										<svg width="13" height="12" class="podcast__likes_default icon">
+											<use class="podcast__likes-icon" xlink:href="./sprite.svg#likes"></use>
+										</svg>
+										<svg class="podcast__likes_liked icon" width="13" height="12">
+											<use class="podcast__likes-liked" xlink:href="./sprite.svg#liked"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__likes-text">44</span>
+									</button>
+									<button class="podcast__shares actions__content btn-reset" aria-label="поделиться">
+										<svg width="12" height="13" class="icon podcast__shares_default">
+											<use class="podcast__shares-icon" xlink:href="./sprite.svg#shares"></use>
+										</svg>
+										<svg width="12" height="13" class="icon podcast__shares_shared">
+											<use class="podcast__shares-shared" xlink:href="./sprite.svg#shared"></use>
+										</svg>
+										<span class="podcast__actions-text podcast__share-text">5</span>
+									</button>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul>
+				<button class="podcasts__more btn-reset">Ещё подкасты</button>
+			</div>
+		</section>
+
+		<section class="shows" id="shows">
+			<div class="container shows__container">
+				<div class="shows__left">
+					<div class="shows__left-top">
+						<h2 class="shows__title">Передачи</h2>
+						<label class="shows__label" for="author">Автор:</label>
+						<select name="author" id="author" class="shows__select">
+						</select>
+					</div>
+					<div class="shows__container-992" data-da=".shows,992,last">
+						<div class="shows__left-bottom">
+							<div class="shows__left-wrap">
+								<a href="#" class="shows__link" onclick="event.preventDefault();" aria-label="Архив">Архив</a>
+								<span class="shows__text">В архив попадают все передачи, которые вы пропустили! Enjoy:)</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="shows__right">
+					<ul class="shows__list">
+						<li class="shows__item">
+							<article class="show">
+								<picture class="show__picture">
+									<source media="(min-width: 560px)" srcset="./img/show1.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/show1-320.jpg">
+									<img class="show__img" src="./img/show1.jpg" alt="О людях и книгах">
+								</picture>
+								<div class="show__body">
+									<div class="show__body-top">
+										<h3 class="show__title">О людях и книгах</h3>
+										<span class="show__schedule">Анонсируется отдельно</span>
+									</div>
+									<div class="show__body-bottom">
+										<a href="#" class="show__more" aria-label="Подробнее">Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="shows__item">
+							<article class="show">
+								<picture class="show__picture">
+									<source media="(min-width: 560px)" srcset="./img/show2.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/show2-320.jpg">
+									<img class="show__img" src="./img/show2.jpg" alt="Графомания td">
+								</picture>
+								<div class="show__body">
+									<div class="show__body-top">
+										<h3 class="show__title">Графомания td</h3>
+										<span class="show__schedule">По понедельникам в 10:00</span>
+									</div>
+									<div class="show__body-bottom">
+										<a href="#" class="show__more" aria-label="Подробнее">Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="shows__item">
+							<article class="show">
+								<picture class="show__picture">
+									<source media="(min-width: 560px)" srcset="./img/show3.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/show3-320.jpg">
+									<img class="show__img" src="./img/show3.jpg" alt="Не Рим, не Троя">
+								</picture>
+								<div class="show__body">
+									<div class="show__body-top">
+										<h3 class="show__title">Не Рим, не Троя</h3>
+										<span class="show__schedule">По вторникам в 12:00</span>
+									</div>
+									<div class="show__body-bottom">
+										<a href="#" class="show__more" aria-label="Подробнее">Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="shows__item">
+							<article class="show">
+								<picture class="show__picture">
+									<source media="(min-width: 560px)" srcset="./img/show4.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/show4-320.jpg">
+									<img class="show__img" src="./img/show4.jpg" alt="Эрудит">
+								</picture>
+								<div class="show__body">
+									<div class="show__body-top">
+										<h3 class="show__title">Эрудит</h3>
+										<span class="show__schedule">По пятницам в 17:00</span>
+									</div>
+									<div class="show__body-bottom">
+										<a href="#" class="show__more" aria-label="Подробнее">Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="shows__item">
+							<article class="show">
+								<picture class="show__picture">
+									<source media="(min-width: 560px)" srcset="./img/show5.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/show5-320.jpg">
+									<img class="show__img" src="./img/show5.jpg" alt="Тонкости эпох">
+								</picture>
+								<div class="show__body">
+									<div class="show__body-top">
+										<h3 class="show__title">Тонкости эпох</h3>
+										<span class="show__schedule">По субботам в 10:00</span>
+									</div>
+									<div class="show__body-bottom">
+										<a href="#" class="show__more" aria-label="Подробнее">Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="shows__item">
+							<article class="show">
+								<picture class="show__picture">
+									<source media="(min-width: 560px)" srcset="./img/show6.jpg">
+									<source media="(max-width: 559.98px)" srcset="./img/show6-320.jpg">
+									<img class="show__img" src="./img/show6.jpg" alt="Живые мысли">
+								</picture>
+								<div class="show__body">
+									<div class="show__body-top">
+										<h3 class="show__title">Живые мысли</h3>
+										<span class="show__schedule">По воскресеньям в 15:30</span>
+									</div>
+									<div class="show__body-bottom">
+										<a href="#" class="show__more" aria-label="Подробнее">Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="guests" id="guests">
+			<div class="container guests__container">
+				<div class="guests__top">
+					<h2 class="guests__title">Гости</h2>
+					<strong class="guests__subtitle">У нас бывают:</strong>
+					<p class="guests__text">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
+				</div>
+
+				<div class="guests__wrap">
+
+					<div class="accordion-container accordion">
+						<div class="ac">
+							<h3 class="ac-header">
+								<button type="button" class="ac-trigger">Блогеры</button>
+							</h3>
+							<div class="ac-panel">
+								<ul class="guests__list">
+									<li class="guests__item">
+										<a id="1" href="#" class="guests__link" aria-label="гость Сергей Денисов">Сергей Денисов</a>
+									</li>
+									<li class="guests__item">
+										<a id="2" href="#" class="guests__link" aria-label="гость Матвей Мечников">Матвей Мечников</a>
+									</li>
+									<li class="guests__item">
+										<a id="3" href="#" class="guests__link" aria-label="гость Константин Прусино">Константин Прусино</a>
+									</li>
+									<li class="guests__item">
+										<a id="4" href="#" class="guests__link" aria-label="гость Иван Калитников">Иван Калитников</a>
+									</li>
+									<li class="guests__item">
+										<a id="5" href="#" class="guests__link" aria-label="гость Евгений Войновский">Евгений Войновский</a>
+									</li>
+									<li class="guests__item">
+										<a id="6" href="#" class="guests__link" aria-label="гость Ольга Мартынова">Ольга Мартынова</a>
+									</li>
+									<li class="guests__item">
+										<a id="7" href="#" class="guests__link" aria-label="гость Дмитрий Михалок">Дмитрий Михалок</a>
+									</li>
+									<li class="guests__item">
+										<a id="8" href="#" class="guests__link" aria-label="гость Пётр Пиотровский">Пётр Пиотровский</a>
+									</li>
+									<li class="guests__item">
+										<a id="9" href="#" class="guests__link" aria-label="гость Олег Свиридовский">Олег Свиридовский</a>
+									</li>
+									<li class="guests__item">
+										<a id="10" href="#" class="guests__link" aria-label="гость Владислав Кауперс">Владислав Кауперс</a>
+									</li>
+									<li class="guests__item">
+										<a id="11" href="#" class="guests__link" aria-label="гость Михаил Пожитников">Михаил Пожитников</a>
+									</li>
+									<li class="guests__item">
+										<a id="12" href="#" class="guests__link" aria-label="гость Георгий Полуян">Георгий Полуян</a>
+									</li>
+									<li class="guests__item">
+										<a id="13" href="#" class="guests__link" aria-label="гость Денис Тельман">Денис Тельман</a>
+									</li>
+									<li class="guests__item">
+										<a id="14" href="#" class="guests__link" aria-label="гость Юрий Горин">Юрий Горин</a>
+									</li>
+									<li class="guests__item">
+										<a id="15" href="#" class="guests__link" aria-label="гость Максим Сергеев">Максим Сергеев</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="ac">
+							<h3 class="ac-header">
+								<button type="button" class="ac-trigger">Арт-критики</button>
+							</h3>
+							<div class="ac-panel">
+								<ul class="guests__list guests__list-critics">
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Василий Церетели">Василий Церетели</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Ольга Свиблова">Ольга Свиблова</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Владимир Овчаренко">Владимир Овчаренко</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Марина Лошак">Марина Лошак</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Андрей Ерофеев">Андрей Ерофеев</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Ольга Мартынова">Ольга Мартынова</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Дмитрий Озерков">Дмитрий Озерков</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Виктор Мизиано">Виктор Мизиано</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Елена Селина">Елена Селина</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="ac">
+							<h3 class="ac-header">
+								<button type="button" class="ac-trigger">Художники</button>
+							</h3>
+							<div class="ac-panel">
+								<ul class="guests__list guests__list-art">
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Илья Кабаков">Илья Кабаков</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Эрик Булатов">Эрик Булатов</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Виталий Комар">Виталий Комар</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Григорий Брускин">Григорий Брускин</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Олег Целков">Олег Целков</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Оскар Рабин">Оскар Рабин</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Виктор Пивоваров">Виктор Пивоваров</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Татьяна Арзамасова">Татьяна Арзамасова</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="ac">
+							<h3 class="ac-header">
+								<button type="button" class="ac-trigger">Люди науки</button>
+							</h3>
+							<div class="ac-panel">
+								<ul class="guests__list guests__list-sciense">
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Наталья Владимирова">Наталья Владимирова</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Лука Глинских">Лука Глинских</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Дарья Иванова">Дарья Иванова</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Илья Янушониис">Илья Янушониис</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Александр Шиганов">Александр Шиганов</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Марина Маслова">Марина Маслова</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Дмитрий Михалок">Дмитрий Михалок</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Станислав Ульянов">Станислав Ульянов
+										</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Георгий Попов">Георгий Попов</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Денис Микоян">Денис Микоян</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Юрий Грушков">Юрий Грушков</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Максим Андреев">Максим Андреев</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="ac">
+							<h3 class="ac-header">
+								<button type="button" class="ac-trigger">Историки</button>
+							</h3>
+							<div class="ac-panel">
+								<ul class="guests__list guests__list-historian">
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Владислав Аксенов">Владислав Аксенов</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Кирилл Александров">Кирилл Александров</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Игорь Алексеев">Игорь Алексеев</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Леонид Болотин">Леонид Болотин</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Елена Борисёнок">Елена Борисёнок</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Юрий Буранов">Юрий Буранов</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Дмитрий Лисейцев">Дмитрий Лисейцев</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Анастасия Ещенко">Анастасия Ещенко</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Любовь Мельникова">Любовь Мельникова</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Владимир Петрухин">Владимир Петрухин</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Андрей Серков">Андрей Серков</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Наталья Черникова">Наталья Черникова</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="ac">
+							<h3 class="ac-header">
+								<button type="button" class="ac-trigger">Филологи</button>
+							</h3>
+							<div class="ac-panel">
+								<ul class="guests__list guests__list-philologists">
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Николай Михайлов">Николай Михайлов</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Константин Богданов">Константин Богданов</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Наталья Корниенко">Наталья Корниенко</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Всеволод Троицкий">Всеволод Троицкий</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Татьяна Касаткина">Татьяна Касаткина</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Валентина Ветловская">Валентина Ветловская</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Виктор Гацак">Виктор Гацак</a>
+									</li>
+									<li class="guests__item">
+										<a href="#" class="guests__link" aria-label="гость Сергей Фомичев">Сергей Фомичев</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="guests__info guest">
+						<div class="guest__card">
+							<picture class="guest__picture">
+								<source media="(min-width: 1200px)" srcset="./img/guest.jpg">
+								<source media="(min-width: 992px)" srcset="./img/guest1024.jpg">
+								<source media="(min-width: 768px)" srcset="./img/guest768.jpg">
+								<img class="guest__img" src="./img/guest.jpg" alt="фотография гостя">
+							</picture>
+
+							<div class="guest__social">
+								<a href="#" class="guest__social-link" onclick="event.preventDefault();" aria-label="инстаграм">
+									<svg class="insta" aria-hidden="true">
+										<use class="insta__icon" xlink:href="./sprite.svg#insta"></use>
+									</svg>
+								</a>
+
+								<a href="#" class="guest__social-link" onclick="event.preventDefault();" aria-label="фэйсбук">
+									<svg class="fb" aria-hidden="true">
+										<use class="fb__icon" xlink:href="./sprite.svg#fb"></use>
+									</svg>
+								</a>
+
+								<a href="#" class="guest__social-link" onclick="event.preventDefault();" aria-label="твиттер">
+									<svg class="tw" aria-hidden="true">
+										<use class="tw__icon" xlink:href="./sprite.svg#tw"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="guest__name"></div>
+							<p class="guest__desc">Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии. Арт-критик газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.</p>
+							<a href="#" class="guest__link" onclick="event.preventDefault();" aria-label="Эфиры с гостем">Эфиры с гостем</a>
+						</div>
+						<div class="guest__card_empty">
+							<span class="guest__card_empty-desc">Тут будет фото гостя</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="playlists" id="playlists">
+			<div class="container playlists__container">
+				<div class="playlists__left">
+					<h2 class="playlists__title">Плейлисты</h2>
+					<span class="playlists__legend">Жанр</span>
+					<form action="#" class="playlists__radio radiobtn">
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="postpunk" class="playlists__radio-btn" checked>
+							<label for="postpunk" class="playlists__label">
+								Постпанк
+							</label>
+						</div>
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="hardcore" class="playlists__radio-btn">
+							<label for="hardcore" class="playlists__label">
+								Хардкор
+							</label>
+						</div>
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="punk-rock" class="playlists__radio-btn">
+							<label for="punk-rock" class="playlists__label">
+								Панк-рок
+							</label>
+						</div>
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="rock" class="playlists__radio-btn">
+							<label for="rock" class="playlists__label">
+								Рок
+							</label>
+						</div>
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="progressive-rock" class="playlists__radio-btn">
+							<label for="progressive-rock" class="playlists__label">
+								Прогрессивный рок
+							</label>
+						</div>
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="electronic" class="playlists__radio-btn">
+							<label for="electronic" class="playlists__label">
+								Электронная музыка
+							</label>
+						</div>
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="classic" class="playlists__radio-btn">
+							<label for="classic" class="playlists__label">
+								Классическая музыка
+							</label>
+						</div>
+						<div class="radiobtn__wrap">
+							<input type="radio" name="genre" id="noises" class="playlists__radio-btn">
+							<label for="noises" class="playlists__label">
+								Звуки природы и шум города
+							</label>
+						</div>
+					</form>
+					<div class="playlists__left-wrap" data-da=".playlists__container,1200,last">
+						<strong class="playlists__advisory">Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних</strong>
+						<small class="playlists__copy">© 2021 l W-Wave</small>
+						<span class="playlists__rating"></span>
+					</div>
+				</div>
+
+				<div class="playlists__right artists">
+					<ul class="artists__list">
+
+						<li class="artists__item">
+							<article class="artist flag-rus" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/ploho.jpg">
+									<source media="(min-width: 992px)" srcset="./img/ploho1024.jpg">
+									<img class="artist__img" src="./img/ploho.jpg" alt="группа Ploho">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Ploho</h3>
+									<span class="artist__albums">3 последних альбома</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-rus" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/molchat-doma.jpg">
+									<source media="(min-width: 992px)" srcset="./img/molchat-doma1024.jpg">
+									<img class="artist__img" src="./img/molchat-doma.jpg" alt="группа Molchat Doma">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Molchat Doma</h3>
+									<span class="artist__albums">Все песни</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-rus" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/motorama.jpg">
+									<source media="(min-width: 992px)" srcset="./img/motorama1024.jpg">
+									<img class="artist__img" src="./img/motorama.jpg" alt="группа Motorama">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Motorama</h3>
+									<span class="artist__albums">Все синглы</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-rus" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/human-tetris.jpg">
+									<source media="(min-width: 992px)" srcset="./img/human-tetris1024.jpg">
+									<img class="artist__img" src="./img/human-tetris.jpg" alt="группа Human Tetris">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Human Tetris</h3>
+									<span class="artist__albums">3 последних альбома</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-rus" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/buerak.jpg">
+									<source media="(min-width: 992px)" srcset="./img/buerak1024.jpg">
+									<img class="artist__img" src="./img/buerak.jpg" alt="группа Буерак">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Буерак</h3>
+									<span class="artist__albums">Все EP</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-rus" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/july-days.jpg">
+									<source media="(min-width: 992px)" srcset="./img/july-days1024.jpg">
+									<img class="artist__img" src="./img/july-days.jpg" alt="группа Июльские Дни">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Июльские Дни</h3>
+									<span class="artist__albums">Альбом «Колокол»</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-uk" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/joy-division.jpg">
+									<source media="(min-width: 992px)" srcset="./img/joy-division1024.jpg">
+									<img class="artist__img" src="./img/joy-division.jpg" alt="группа Joy Division">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Joy Division</h3>
+									<span class="artist__albums">Лучшее за всё время</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-uk" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/the-cure.jpg">
+									<source media="(min-width: 1024px)" srcset="./img/the-cure1024.jpg">
+									<img class="artist__img" src="./img/the-cure.jpg" alt="группа The Cure">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">The Cure</h3>
+									<span class="artist__albums">Лучшее за всё время</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-uk" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/the-smiths.jpg">
+									<source media="(min-width: 992px)" srcset="./img/the-smiths1024.jpg">
+									<img class="artist__img" src="./img/the-smiths.jpg" alt="группа The Smiths">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">The Smiths</h3>
+									<span class="artist__albums">Период 1984–1988</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-uk" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/new-order.jpg">
+									<source media="(min-width: 992px)" srcset="./img/new-order1024.jpg">
+									<img class="artist__img" src="./img/new-order.jpg" alt="группа New Order">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">New Order</h3>
+									<span class="artist__albums">Хиты</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-uk" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/bahaus.jpg">
+									<source media="(min-width: 992px)" srcset="./img/bahaus1024.jpg">
+									<img class="artist__img" src="./img/bahaus.jpg" alt="группа Bauhaus">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Bauhaus</h3>
+									<span class="artist__albums">Все синглы</span>
+								</div>
+							</article>
+						</li>
+
+						<li class="artists__item">
+							<article class="artist flag-uk" tabindex="0">
+								<picture class="artist__picture">
+									<source media="(min-width: 1200px)" srcset="./img/gang-of-four.jpg">
+									<source media="(min-width: 992px)" srcset="./img/gang-of-four1024.jpg">
+									<img class="artist__img" src="./img/gang-of-four.jpg" alt="группа Gang Of Four">
+								</picture>
+								<div class="artist__body">
+									<h3 class="artist__title">Gang Of Four</h3>
+									<span class="artist__albums">3 последних альбома</span>
+								</div>
+							</article>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="promo">
+			<div class="container promo__container">
+				<picture class="promo__picture">
+					<source media="(min-width: 1366px)" srcset="./img/promo-radio.png">
+					<source media="(min-width: 992px)" srcset="./img/promo-radio1024.png">
+					<source media="(min-width: 768px)" srcset="./img/promo-radio768.png">
+					<source media="(min-width: 320px)" srcset="./img/promo-radio320.png">
+					<img src="./img/promo-radio.png" alt="портативная колонка w-wave" class="promo__img">
+				</picture>
+				<div class="promo__text">
+					<h2 class="promo__title">Будь с нами на одной волне!</h2>
+					<div class="promo__wave"></div>
+					<div class="promo__wrap-text">
+						<p class="promo__desc">Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на&nbsp;то, что мы&nbsp;только начали свой путь радиовещателей, нам хочется, чтобы вы&nbsp;могли как следует нас расслышать:)</p>
+						<p class="promo__desc">Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0&nbsp;xm. Тщательный подбор всех делатей, ручная сборка, качественный звук. Пока доступно только 60&nbsp;штук в&nbsp;3&nbsp;цветах, но&nbsp;мы&nbsp;активно трудимся над новыми партиями и&nbsp;дизайном. Спешите приобрести!</p>
+					</div>
+					<div class="promo__wrap-bottom">
+						<span class="promo__price" aria-description="цена">2 800 ₽</span>
+						<a href="#" class="promo__link" onclick="event.preventDefault();" aria-label="Купить на Яндекс Маркет">
+							<svg class="promo__market">
+								<use class="promo__icon" xlink:href="./sprite.svg#market"></use>
+							</svg>
+							<svg class="promo__market-circle">
+								<use class="promo__circle" xlink:href="./sprite.svg#market__circle"></use>
+							</svg>
+							Купить на Яндекс.Маркет
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="about-us" id="about-us">
+			<div class="about-us__text container about-us__container">
+				<div class="about-us__text-left">
+					<h2 class="about-us__title">О нас</h2>
+					<strong class="about-us__subtitle">Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!</strong>
+					<p class="about-us__desc">
+						Друзья, мы&nbsp;будем очень рады, если вы&nbsp;поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы&nbsp;можете поделиться обратной связью о&nbsp;наших предеачах, темах, подборках и&nbsp;вообще обо всём! Это можно сделать либо написав нам в&nbsp;форме ниже, либо кликнув на&nbsp;наши соцсети в&nbsp;подвале сайта. Спасибо! Услышимся!:)
+					</p>
+				</div>
+				<div class="about-us__text-right"></div>
+			</div>
+
+			<div class="about-us__background"></div>
+
+			<div class="about-us__swiper-container">
+				<div class="swiper swiper-container">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide presenter">
+							<picture class="presenter__picture">
+								<source media="(min-width: 1200px)" srcset="./img/presenter1.jpg">
+								<source media="(min-width: 992px)" srcset="./img/presenter1-1024.jpg">
+								<source media="(min-width: 768px)" srcset="./img/presenter1-768.jpg">
+								<img class="presenter__img" src="./img/presenter1.jpg" alt="Дмитрий Гутенберг">
+							</picture>
+							<div class="presenter__info">
+								<h3 class="presenter__name">Дмитрий Гутенберг</h3>
+								<span class="presenter__desc">Эксперт (ну, почти) по всем вопросам (почти)</span>
+							</div>
+						</div>
+
+						<div class="swiper-slide presenter">
+							<picture class="presenter__picture">
+								<source media="(min-width: 1200px)" srcset="./img/presenter2.jpg">
+								<source media="(min-width: 992px)" srcset="./img/presenter2-1024.jpg">
+								<source media="(min-width: 768px)" srcset="./img/presenter2-768.jpg">
+								<img class="presenter__img" src="./img/presenter2.jpg" alt="Анна Васильева">
+							</picture>
+							<div class="presenter__info">
+								<h3 class="presenter__name">Анна Васильева</h3>
+								<span class="presenter__desc">Как я здесь оказалась? А главное — зачем?</span>
+							</div>
+						</div>
+
+						<div class="swiper-slide presenter">
+							<picture class="presenter__picture">
+								<source media="(min-width: 1200px)" srcset="./img/presenter3.jpg">
+								<source media="(min-width: 992px)" srcset="./img/presenter3-1024.jpg">
+								<source media="(min-width: 768px)" srcset="./img/presenter3-768.jpg">
+								<img class="presenter__img" src="./img/presenter3.jpg" alt="Пётр Дмитриевский">
+							</picture>
+							<div class="presenter__info">
+								<h3 class="presenter__name">Пётр Дмитриевский</h3>
+								<span class="presenter__desc">Господа! Внимание! Благодарю за внимание!</span>
+							</div>
+						</div>
+
+						<div class="swiper-slide presenter">
+							<picture class="presenter__picture">
+								<source media="(min-width: 1200px)" srcset="./img/presenter4.jpg">
+								<source media="(min-width: 992px)" srcset="./img/presenter4-1024.jpg">
+								<source media="(min-width: 768px)" srcset="./img/presenter4-768.jpg">
+								<img class="presenter__img" src="./img/presenter4.jpg" alt="Татьяна Флеганова">
+							</picture>
+							<div class="presenter__info">
+								<h3 class="presenter__name">Татьяна Флеганова</h3>
+								<span class="presenter__desc">Одна я в пальто стою красивая, а вокруг…</span>
+							</div>
+						</div>
+
+						<div class="swiper-slide presenter">
+							<picture class="presenter__picture">
+								<source media="(min-width: 1200px)" srcset="./img/presenter5.jpg">
+								<source media="(min-width: 992px)" srcset="./img/presenter5-1024.jpg">
+								<source media="(min-width: 768px)" srcset="./img/presenter5-768.jpg">
+								<img class="presenter__img" src="./img/presenter5.jpg" alt="Фёдор Прокопьев">
+							</picture>
+							<div class="presenter__info">
+								<h3 class="presenter__name">Фёдор Прокопьев</h3>
+								<span class="presenter__desc">Привет! Я фотограф, музыкант, ведущий</span>
+							</div>
+						</div>
+
+						<div class="swiper-slide presenter">
+							<picture class="presenter__picture">
+								<source media="(min-width: 1200px)" srcset="./img/presenter6.jpg">
+								<source media="(min-width: 992px)" srcset="./img/presenter6-1024.jpg">
+								<source media="(min-width: 768px)" srcset="./img/presenter6-768.jpg">
+								<img class="presenter__img" src="./img/presenter6.jpg" alt="Светлана Кортнева">
+							</picture>
+							<div class="presenter__info">
+								<h3 class="presenter__name">Светлана Кортнева</h3>
+								<span class="presenter__desc">Художник-оформитель. Оформляю</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button aria-label="предыдущий слайд" id="swiper-prev"></button>
+				<button aria-label="следующий слайд" id="swiper-next"></button>
+			</div>
+
+			<div class="about-us__form container">
+				<form action="https://postman-echo.com/post" method="post" class="form" id="form" autocomplete="off">
+					<div class="form__group">
+						<textarea name="textarea" id="textarea" class="form__textarea" placeholder="Что скажете?" aria-required="true"></textarea>
+					</div>
+					<div class="form__wrap">
+						<div class="form__group">
+							<input class="form__input" type="text" name="name" id="name" placeholder="Имя" autocomplete="off" aria-required="true">
+						</div>
+						<div class="form__group">
+							<input class="form__input" type="email" name="email" id="email" placeholder="Email" autocomplete="off" aria-required="true">
+						</div>
+					</div>
+					<button class="form__btn btn-reset" type="submit" aria-label="отправить">Отправить</button>
+					<div class="form__group">
+						<label class="form__label" for="checkbox">
+							<input type="checkbox" class="form__checkbox" id="checkbox" aria-required="true">
+							<span class="form__checkbox-caption">Согласен на обработку персональных данных</span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container footer__container">
+			<div class="footer__left">
+				<img class="footer__logo" src="./img/footer-logo.svg" alt="логотип w-wave">
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="#" class="footer__link" onclick="event.preventDefault();" aria-label="ютуб">
+							<svg class="yt" aria-hidden="true">
+								<use class="yt__icon" xlink:href="./sprite.svg#yt"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link" onclick="event.preventDefault();" aria-label="одноклассники">
+							<svg class="ok" aria-hidden="true">
+								<use class="ok__icon" xlink:href="./sprite.svg#ok"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link" onclick="event.preventDefault();" aria-label="вконтакте">
+							<svg class="vk" aria-hidden="true">
+								<use class="vk__icon" xlink:href="./sprite.svg#vk"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__right nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#podcasts" class="nav__link" aria-label="Подкасты">
+							Подкасты
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#shows" class="nav__link" aria-label="Передачи">
+							Передачи
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#guests" class="nav__link" aria-label="Гости">
+							Гости
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#playlists" class="nav__link" aria-label="Плейлисты">
+							Плейлисты
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link" onclick="event.preventDefault();" aria-label="Сетка">
+							Сетка
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#about-us" class="nav__link" aria-label="О нас">
+							О нас
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link" onclick="event.preventDefault();" aria-label="Новости">
+							Новости
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link" onclick="event.preventDefault();" aria-label="Блоги">
+							Блоги
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link" onclick="event.preventDefault();" aria-label="Топы	">
+							Топы
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<span class="footer__copy">W-WAVE ® 2021</span>
+		</div>
+	</footer>
+
+	<div class="modal" id="modal" aria-hidden="true">
+		<div class="modal__dialog" role="dialog" aria-modal="true">
+			<a role="button" href="#close" class="modal__close-btn btn-reset" aria-label="закрыть окно"></a>
+			<div class="modal__content">
+				<h2 class="modal__title">Вход</h2>
+				<p class="modal__text">Если у вас ещё нет аккаунта, <a href="#" class="modal__text-link" onclick="event.preventDefault();" aria-label="зарегестрируйтесь">зарегестрируйтесь</a></p>
+				<form action="#" class="modal__form" id="modal__form" autocomplete="off">
+					<input class="modal__input" type="text" name="login" id="login" placeholder="Логин" autocomplete="off" aria-required="true">
+					<input class="modal__input" type="password" name="password" id="password" placeholder="Пароль" autocomplete="off" aria-required="true">
+					<button class="modal__form-btn btn-reset" type="submit" onclick="event.preventDefault();" aria-label="войти">Войти</button>
+				</form>
+			</div>
+			<div class="modal__footer">
+				<span class="modal__footer-text">Войти с помощью:</span>
+				<ul class="modal__list">
+					<li class="modal__item">
+						<a href="#" class="modal__link" onclick="event.preventDefault();" aria-label="войти с помощью фейсбук">
+							<svg class="modal__icon">
+								<use xlink:href="./sprite.svg#fb"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="modal__item">
+						<a href="#" class="modal__link" onclick="event.preventDefault();" aria-label="войти с помощью вконтакте">
+							<svg class="modal__icon">
+								<use xlink:href="./sprite.svg#modal__vk"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="modal__item">
+						<a href="#" class="modal__link" onclick="event.preventDefault();" aria-label="войти с помощью гугл">
+							<svg class="modal__icon google">
+								<use xlink:href="./sprite.svg#g"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script src="./libs/focus-visible.min.js"></script>
+	<script src="./libs/choices.min.js"></script>
+	<script src="./libs/accordion.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="./libs/dynamicAdapt.js"></script>
+	<script type="module" src="./script/index.js"></script>
+</body>
+
+</html>
